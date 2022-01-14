@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*--------- GRID INDEX ---------*/
+#grilla_index{
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:
+  "header header"
+  "main main"
+  "divImg divImg" 
+  "divParrafo divParrafo"
+  "conteiner conteiner"
+  "iframe iframe"
+  "footer footer"
+  ;
+}
+.body {
+  background-color: rgb(80, 77, 77);
+
+}
+/*---------- HEADER ---------*/
+
+.header {
+  grid-area: header;
+  background-image: url(./img/logo_hotel_buenos_aires.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: content;
+  padding: 2rem;
+
+}
+.header__div__flex {
+  display: flex;
+  justify-content: end;
+}
+.header__nav ul {
+  padding: 1rem;
+  list-style-type: none;
+}
+.header__nav li {
+  display: inline-block;
+}
+.header__nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: beige;
+  text-align: center;
+  font-size: 1rem;
+  background-color: black;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-style: groove;
+  border-color: white;
+}
+.header__formulario {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  background-color: whitesmoke;
+  border-style: groove;
+  border-color: whitesmoke;
+  display: inline-block;
+  margin: auto;
+
+}
+
+/*---------- MAIN ----------*/
+
+.main__titulo {
+  grid-area: main;
+  background-color: grey;
+  text-transform: uppercase;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem;
+  background-position: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/*---------- DIV_CENTER -----------*/
+
+.div__center__img {
+  grid-area: divImg;
+  display: flex;
+  height: auto;
+  width: 100%;
+  padding: 1rem;
+  margin: 1,5rem;
+}
+
+.div__parrafo {
+  grid-area: divParrafo;
+  background-position:initial;
+  color: white;
+  text-align: justify;
+  font-size:small;
+  padding: 2rem;
+}
+
+
+/*---------- DIV IMG ----------*/
+
+.conteiner {
+  grid-area: conteiner;
+  width: 90%;
+  height: auto;
+  margin: 2rem auto;
+  border: o,2rem solid transparent;
+  border-radius: 0,3rem;
+  padding: 0,5rem;
+}
+
+.conteiner__img {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 1rem;
+  padding: 1rem;
+
+}
+
+.conteiner__img img{
+  width: 30rem;
+  height: 20rem;
+}
+
+/*---------- DIV IFAME ----------*/
+
+.div__iframe {
+  grid-area: iframe;
+  display:flex;
+  width: max-content;
+  height: max-content;
+}
+
+/*---------- FOOTER ----------*/
+
+.footer {
+  grid-area: footer;
+  background-image: url(./img/logo_hotel_buenos_aires.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: content;
+  padding: 1rem;
+}
+.footer__nav ul {
+  padding: 2rem;
+  list-style-type: none;
+}
+.footer__nav li {
+  display: inline-block;
+}
+.footer__nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: rgba(211, 204, 204, 0.37);
+  margin: 1rem;
+  padding: 0.5rem;
+  border-style: groove;
+  border-color: white;
+}
+.footer__redes li {
+  display: inline-block;
+  font-family: monospace;
+  font-style: oblique;
+  color: darkgray;
+  list-style-type: none;
+  
+}
+
+.footer__div {
+  align-items: flex-end;
+
+}
+
+/*---------- MEDIAQUERIE ----------*/
+@media (min-width: 768px){
+  .body{
+    background-color: black;
+  }
+  #grilla_index{
+    grid-template-areas:
+    "header header"
+    "main main"
+    "divImg divParrafo"
+    "conteiner conteiner"
+    "iframe iframe"
+    "footer footer"
+    ;
+  }
+  .header__nav a {
+    color: black;
+    background-color: whitesmoke;
+    border-style:solid;
+    border-color: dimgrey;
+  }
+  .main__titulo{
+    font-size: 2rem;
+    text-shadow: cornsilk;
+  }
+  .conteiner__img {
+    flex-direction: row;
+  }
+  .div__parrafo {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:large;
+    padding: 3 rem;
+  }
+}
+ 
+
